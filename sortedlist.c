@@ -1,7 +1,7 @@
 /* Sorted singly-linked string lists in C
-   Back to (very basic) basics!!
-   Bob Lantz, October 2017
-   Dedicated to: S. Skiena
+ * Back to (very basic) basics!!
+ * Bob Lantz, October 2017
+ * Dedicated to: S. Skiena
 */
 
 #include <stdlib.h>
@@ -39,7 +39,7 @@ node *find(list *l, char *item) {
 }
 
 /* Insert item in sorted list l: O(n)
-   Duplicates an existing node and stuffs item into it. */
+ * Duplicates an existing node and stuffs item into it. */
 void insert(list *l, char *item) {
   node *n;
   for (n = l->head; n != l->sentinel; n = n->next)
@@ -52,7 +52,7 @@ void insert(list *l, char *item) {
  }
 
 /* "Delete" node n in sorted list l: O(1)
-   Actually updates n and frees n's successor */
+ * Actually updates n and frees n's successor */
 void delete(list *l, node *n) {
   node *next = n->next;
   *n = *next;
@@ -93,6 +93,3 @@ void test() {
 int main() {
   test();
 }
-
-
-
