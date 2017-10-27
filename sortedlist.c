@@ -21,10 +21,10 @@ typedef struct list {
 
 /* Return an empty sorted list: O(1) */
 list *newlist() {
-  node new = { NULL, NULL };
   list *l = (list *) malloc(sizeof(list));
   l->head = l->sentinel = (node *) malloc(sizeof(list));
-  *l->sentinel = new;
+  l->sentinel->item = NULL;
+  l->sentinel->next = NULL;
   return l;
 }
 
